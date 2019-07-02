@@ -22,7 +22,7 @@ class MAAP(object):
     def __init__(self):
         self.config = ConfigParser()
 
-        config_paths = list(map(self._get_config_path, [os.curdir, os.path.expanduser("~"), os.environ.get("MAAP_CONF") or '.']))
+        config_paths = list(map(self._get_config_path, [os.curdir, os.path.expanduser("~"), os.environ.get("MAAP_CONF"), './../'  or '.']))
 
         for loc in config_paths:
             try:
